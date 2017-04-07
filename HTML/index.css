@@ -1,9 +1,15 @@
+
+html, body {
+	height: 100%;
+}
 //These are fonts imported in the head of index form google
 //font-family: 'Clicker Script', cursive;
 //font-family: 'Fascinate Inline', cursive;
 //font-family: 'Griffy', cursive;
 //font-family: 'Open Sans', sans-serif;
-//dropdown
+/*dropdown*/
+
+	
 nav {
     background-color: inherit; //for some reason this works with line 23
     display: block
@@ -33,13 +39,15 @@ li:last-child {
 
 li {
     float: left;
+	width: 20%;
+	text-align: center;
 }
 
 li a, .dropbtn {
     display: inline-block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 8px;
     text-decoration: none;
 }
 
@@ -75,7 +83,66 @@ li.dropdown {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+/*THIS IS THE CSS FOR THE TILES*/
 
+.metro-surface{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 40px 0px 0px 0px;
+}
+
+
+.metro-tile {
+	position: relative;
+	background-color: green;
+	border-color: #red;
+	width: 460px;
+	height: 125px;
+	padding: 5px;
+	color: #FFF;
+	font-family: sans-serif;
+	font-size: 12px;
+	border-width: 3px;
+	border-style: outset;
+	cursor: default;
+	text-align: center;
+	display:inline-block;
+	-webkit-transition: 0.1s all;
+	-moz-transition: 0.1s all;
+	-ms-transition: 0.1s all;
+	transition: 0.1s all;
+}
+.metro-tile-small {
+	width: 125px;
+	height: 125px;
+}
+
+.metro-tile-large	{
+	position:relative;
+	background-color:red;
+	border-color:green;
+	width:1230px;
+	height:150px;
+	padding:5px;
+	color:#FFF;
+	font-family:sans-serif;
+	font-size: 12px;
+	border-width: 3px;
+	border-style: outset;
+	cursor: default;
+	text-align: center;
+	-webkit-transition: 0.1s all;
+	-moz-transition: 0.1s all;
+	-ms-transition: 0.1s all;
+	transition: 0.1s all;
+}
+div.metro-tile:hover {
+	-webkit-transform: scale(0.97) perspective(400px) rotateY(0deg) rotateX(0deg);
+	-moz-transform: scale(0.97) perspective(400px) rotateY(0deg) rotateX(0deg);
+	-ms-transform: scale(0.97) perspective(400px) rotateY(0deg) rotateX(0deg);
+	transform: scale(0.97) perspective(400px) rotateY(0deg) rotateX(0deg);
+}
 
 /* THIS IS THE CSS NEEDED FPR A MENU ICON ILL KEEP MIT COMMENT ED OUT UNTIL WE DECIDE IF ITS NECCESSARY
 #######################################################################################################
@@ -83,7 +150,6 @@ li.dropdown {
    display: inline-block;
    cursor: pointer;
 }
-
 .bar1, .bar2, .bar3 {
    width: 35px;
    height: 5px;
@@ -91,14 +157,11 @@ li.dropdown {
    margin: 6px 0;
    transition: 0.4s;
 }
-
 .change .bar1 {
    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
    transform: rotate(-45deg) translate(-9px, 6px) ;
 }
-
 .change .bar2 {opacity: 0;}
-
 .change .bar3 {
    -webkit-transform: rotate(48deg) translate(-8px, -8px) ;
    transform: rotate(45deg) translate(-8px, -8px) ;
