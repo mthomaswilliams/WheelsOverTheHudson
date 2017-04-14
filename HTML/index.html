@@ -1,82 +1,170 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-
-		<!--Fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Clicker+Script|Fascinate+Inline|Griffy|Open+Sans" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="index.css">
-
-		<meta charset="UTF-8">
-		<title>Wheels Over the Hudson</title>
-
-		<style>
-
-		</style>
-</head>
-<nav>
-		<!--- nav bar i just did a simple drop down menu. modification we need to do is get a background color picked/logo and have it span the top of the page and at the end of the m,enu and a search box to the website so that it looks closer to the droid life one--->
-		<ul>
-				<!-- THIS IS THE HTML FOR THE MENU ICON
-	########################################################
-		<LI>
-		<div class="container" onclick="myFunction(this)">
-	<div class="bar1"></div>
-	<div class="bar2"></div>
-	<div class="bar3"></div>
-</div>
-
-
-<script>
-function myFunction(x) {
-		x.classList.toggle("change");
+html, body {
+	height: 100%;
 }
-</script>
-###########################################################
---->
+//These are fonts imported in the head of index form google
+//font-family: 'Clicker Script', cursive;
+//font-family: 'Fascinate Inline', cursive;
+//font-family: 'Griffy', cursive;
+//font-family: 'Open Sans', sans-serif;
+/*dropdown*/
 
-				</li>
-				<!-- cODE FOR THE DROP DOWN MENU--->
-				<li class="dropdown">
-						<a href="javascript:void(0)" class="dropbtn">Home</a>
-						<div class="dropdown-content">
-								<a href="#">Link 1</a>
-								<a href="#">Link 2</a>
-								<a href="#">Link 3</a>
-								<li class="dropdown">
-										<a href="javascript:void(0)" class="dropbtn">Dropdown</a>
-										<div class="dropdown-content">
-												<a href="#">Link 1</a>
-												<a href="#">Link 2</a>
-												<a href="#">Link 3</a>
-												<li class="dropdown">
-														<a href="javascript:void(0)" class="dropbtn">Dropdown</a>
-														<div class="dropdown-content">
-																<a href="#">Link 1</a>
-																<a href="#">Link 2</a>
-																<a href="#">Link 3</a>
-														</div>
-												</li>
-												<li class="dropdown">
-														<a href="javascript:void(0)" class="dropbtn">Dropdown</a>
-														<div class="dropdown-content">
-																<a href="#">Link 1</a>
-																<a href="#">Link 2</a>
-																<a href="#">Link 3</a>
-														</div>
-												</li>
-		</ul>
+	
+nav {
+    background-color: inherit; //for some reason this works with line 23
+    display: block
+}
 
-</nav>
-
-<body bgcolor=yellow>
-		<!-- Temporary color to help see the menu bar -->
-		<!--
-Boxes
--->
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333; // line 23
+}
 
 
+/* tHIS IS THE CSS FOR THE GRAY VERTICAL BARS IN BETWEEN MENU*/
 
-</body>
+li {
+    border-right: 1px solid #bbb;
+}
 
-</html>
+li:last-child {
+    border-LEFT: none;
+}
+
+
+/* THIS IS WHERE PREVIOUS COMMENT ENDS */
+
+li {
+    float: left;
+	width: 20%;
+	text-align: center;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 8px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #E1E1E1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/*THIS IS THE CSS FOR THE TILES*/
+
+.metro-surface{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 40px 0px 0px 0px;
+}
+
+
+.metro-tile {
+	position: relative;
+	background-color: green;
+	border-color: #red;
+	width: 460px;
+	height: 125px;
+	padding: 5px;
+	color: #FFF;
+	font-family: sans-serif;
+	font-size: 12px;
+	border-width: 3px;
+	border-style: outset;
+	cursor: default;
+	text-align: center;
+	display:inline-block;
+	-webkit-transition: 0.1s all;
+	-moz-transition: 0.1s all;
+	-ms-transition: 0.1s all;
+	transition: 0.1s all;
+}
+.metro-tile-small {
+	width: 125px;
+	height: 125px;
+}
+
+.metro-tile-large	{
+	position:relative;
+	background-color:red;
+	border-color:green;
+	width:1230px;
+	height:150px;
+	padding:5px;
+	color:#FFF;
+	font-family:sans-serif;
+	font-size: 12px;
+	border-width: 3px;
+	border-style: outset;
+	cursor: default;
+	text-align: center;
+	-webkit-transition: 0.1s all;
+	-moz-transition: 0.1s all;
+	-ms-transition: 0.1s all;
+	transition: 0.1s all;
+}
+div.metro-tile:hover {
+	-webkit-transform: scale(0.97) perspective(400px) rotateY(0deg) rotateX(0deg);
+	-moz-transform: scale(0.97) perspective(400px) rotateY(0deg) rotateX(0deg);
+	-ms-transform: scale(0.97) perspective(400px) rotateY(0deg) rotateX(0deg);
+	transform: scale(0.97) perspective(400px) rotateY(0deg) rotateX(0deg);
+}
+
+/* THIS IS THE CSS NEEDED FPR A MENU ICON ILL KEEP MIT COMMENT ED OUT UNTIL WE DECIDE IF ITS NECCESSARY
+#######################################################################################################
+.container {
+   display: inline-block;
+   cursor: pointer;
+}
+.bar1, .bar2, .bar3 {
+   width: 35px;
+   height: 5px;
+   background-color: WHITE;
+   margin: 6px 0;
+   transition: 0.4s;
+}
+.change .bar1 {
+   -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+   transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+.change .bar2 {opacity: 0;}
+.change .bar3 {
+   -webkit-transform: rotate(48deg) translate(-8px, -8px) ;
+   transform: rotate(45deg) translate(-8px, -8px) ;
+}
+########################################################################################################
+*/
